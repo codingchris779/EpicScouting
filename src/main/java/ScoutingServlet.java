@@ -10,8 +10,8 @@ import java.util.List;
 
 
 @WebServlet(
-        name = "selectliquorservlet",
-        urlPatterns = "/SelectLiquor"
+        name = "scoutingServlet",
+        urlPatterns = "/Quality of Team"
 )
 public class ScoutingServlet extends HttpServlet {
 
@@ -26,7 +26,7 @@ public class ScoutingServlet extends HttpServlet {
         List action = logic.getWhatShouldBeDone(l);
 
         req.setAttribute("brands", action);
-        RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("Webapp.result.jsp");
         view.forward(req, resp);
 
     }
